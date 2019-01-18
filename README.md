@@ -140,9 +140,9 @@ if(window["running"]) {
 
 
                               {{0-1}}
-> 1. Nutzen Sie die oberen Pfeile um im Kurs weiter zugehen.
+> __1.__ Nutzen Sie die oberen Pfeile um im Kurs weiter zugehen.
 >
-> 2. Schalten Sie den Ton für die Sprachausgabe ein.
+> __2.__ Schalten Sie den Ton für die Sprachausgabe ein.
 
                              --{{1}}--
 LiaScript ist eine Erweiterung der Auszeichnungssprache
@@ -1218,7 +1218,7 @@ Teilen.
 
 
 1. LiaScript ist eine reine client-seitige Implementierung in JavaScript
-   ([Elm](https://elm-lang.org/))
+   ([Elm](https://elm-lang.org))
 2. Kurse können überall gehostet werden
    (bevorzug auf [GitHub](https://github.com))
 3. Jeder behält die Rechte an seinem Kurs
