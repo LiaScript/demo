@@ -138,16 +138,20 @@ if(window["running"]) {
 
 # LiaScript: Demo
 
-{{0-1}}
-> Nutzen Sie die oberen Pfeile um im Kurs weiterzugehen...
 
-                                --{{1}}--
+                              {{0-1}}
+> Nutzen Sie die oberen Pfeile um im Kurs weiterzugehen.
+>
+> Und schalten Sie den Ton für die Sprachausgabe ein.
+
+                             --{{1}}--
 LiaScript ist eine Erweiterung der Auszeichnungssprache
 [Markdown](https://de.wikipedia.org/wiki/Markdown). Das ursprüngliche  Ziel von
 Markdown war es, die Ausgangsform auch ohne weitere Konvertierung für einen
 Menschen leicht lesbar un damit auch editierbar zu machen.
 
-                           {{1-2}}
+
+                              {{1-2}}
 ```markdown Markdown-Beispiel.md
 # Überschrift
 
@@ -179,7 +183,7 @@ Ungeordnete Listen sehen wie folgt aus:
 ### Unterabschnitte ...
 ```
 
-                                 --{{2}}--
+                             --{{2}}--
 LiaScript setzt auf dieser Notation auf, erweitert diese um viele multimediale
 Elemente und erlaubt es beliebige JavaScript-Funktionalität einzubinden. Der
 Fokus von LiaScript lag bei der einfachen Entwicklung von online-Kursen für
@@ -190,12 +194,13 @@ etc. Es sollte einfach um zusätzliche Funktionalität erweiterbar sein und durc
 ein integriertes Macro-System auch wiederverwendbare Komponenten kapseln.
 
 
-      {{2}}
+                               {{2}}
 * Project-Webseite:
   https://LiaScript.github.io
 * Dieser Kurs auf:
   * GitHub --> TODO
   * LiaScript --> TODO
+
 
 ## Erweiterungen
 
@@ -207,15 +212,16 @@ auf der Projekt-Seite verwiesen.
 
 ![knowledge hit](https://media.giphy.com/media/jCL5JbYPYQz96/giphy.gif)<!--width="100%"-->
 
+
 ### Multimedia
 
-                                 --{{0}}--
+                             --{{0}}--
 Markdown unterstützt von Haus aus zwei Typen von Verweisen, dazu zählen
 einerseits einfache Links auf externe oder interne Seiten, die wie folgt
 definiert werden:
 
 
-                                  {{0-1}}
+                              {{0-1}}
 *******************************************************************************
 
 __Markdown-Code: (Verweis)__
@@ -235,7 +241,7 @@ __Resultat:__
 
 *******************************************************************************
 
-                                --{{1}}--
+                              --{{1}}--
 Bilder werden wie Verweise behandelt, nur das hier ein Ausrufezeichen vor den
 formatierten Verweis gestellt werden muss:
 
@@ -456,6 +462,7 @@ Zeichen und Symbole interpetieren kann.
 
 *******************************************************************
 
+
 ### Quizze
 
                             --{{0}}--
@@ -646,6 +653,7 @@ Text-Quiz. Jedoch sei hier auch auf die Dokumentation von LiaScript verwiesen.
 
 
 *******************************************************************************
+
 
 ### Programmierung
 
@@ -1106,10 +1114,10 @@ ein Knopf, der es erlaubt zwischen den unterschiedlichen Darstellungsmodi zu
 wechseln. Diese Option kommt frei Haus und sie können selber entscheiden ob sie
 lieber den Erklärtext wie in ein Präsentation hören oder lieber ein Buch lesen.
 
-
 1. Präsentation
 2. Folien
 3. Lehrbuch
+
 
 ### Fragmente
 
@@ -1145,6 +1153,7 @@ Fragment und verschwindet bei Punkt 4.
 Ich bin immer a ...
 
 {{4}} Ich komme zu letzt.
+
 
 ### Sprache
 
@@ -1185,8 +1194,6 @@ I should speak with an UK like accent.
 
       --{{3 Russian Female}}--
 Я говорю по-русски с женским голосом.
-
-
 
 
 ## Abschließende Worte
