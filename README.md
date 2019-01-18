@@ -467,7 +467,7 @@ Zeichen und Symbole interpretieren kann.
 ### Quizze
 
                              --{{0}}--
-Quizze sind eine gute Möglichkeit dem Schüler kurz nochmal die Möglichkeit zu
+Ein Quiz ist eine gute Möglichkeit dem Lernenden kurz nochmal die Möglichkeit zu
 geben, sein Wissen bezüglich eines aktuellen Lernmoduls zu überprüfen. LiaScript
 unterstützt grundsätzlich 4 Quiz-Typen, die durch zusätzliche Elemente
 angepasst werden können:
@@ -480,15 +480,16 @@ angepasst werden können:
 
 
                              --{{1}}--
-Text-Quizze werden durch doppelt eckige Klammern definiert, die jeweilige
-Lösung schon enthalten. Diese Lösung ist für den Schüler nicht sichtbar, er kann
-seine Eingaben mehrfach prüfen und gegebenenfalls die Auflösung anfordern:
+Ein Text-Quiz wird durch doppelt eckige Klammern definiert, welches diese
+jeweilige Lösung schon enthält. Diese Lösung ist für den Nutzer nicht sichtbar.
+Er kann seine Eingaben mehrfach prüfen und gegebenenfalls die Auflösung
+anfordern:
 
 
                               {{1-2}}
 *******************************************************************************
 
-``` markdown TextQuiz
+``` markdown Text-Quiz 1
 **Welche Markdown-Erweiterung wird hier vorgestellt?**
 
     [[LiaScript]]
@@ -512,7 +513,7 @@ eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
                               {{2-3}}
 *******************************************************************************
 
-``` markdown TextQuiz
+``` markdown Text-Quiz 2
 **Welche Markdown-Erweiterung wird hier vorgestellt?**
 
     [[LiaScript]]
@@ -558,10 +559,10 @@ eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
 
 
                              --{{3}}--
-Single-Choice-Quizze werden durch stilisierte Radio-Buttons dargestellt, wobei
-hier das `X` markiert, welche Lösung die richtige ist. Hierbei darf auch nur
-eine Zeile ein `X` enthalten. Erweiterungen um Hinweise und Auflösungen sind
-genauso wie bei einem Text-Quiz möglich.
+Ein Single-Choice-Quiz wird durch stilisierte Radio-Buttons dargestellt, wobei
+das `X` hier die richtige Lösung markiert. Hierbei darf nur eine Zeile ein `X`
+enthalten. Erweiterungen um Hinweise und Auflösungen sind genauso wie bei einem
+Text-Quiz möglich.
 
 
 {{3-4}}
@@ -589,7 +590,7 @@ genauso wie bei einem Text-Quiz möglich.
 
 
                              --{{4}}--
-Mehrere Auswahloptionen und damit Multiple-Choice-Quizze können durch eine
+Mehrere Auswahloptionen und damit Multiple-Choice-Fragen können durch eine
 Gruppe sogenannter Check-Buttons angegeben werden. Dabei können auch alle
 Elemente durch ein `X` markiert sein oder keines.
 
@@ -621,11 +622,11 @@ Elemente durch ein `X` markiert sein oder keines.
 
 
                              --{{5}}--
-Generische Quizze können mithilfe der folgenden Notation erstellt werden, wobei
+Ein generisches Quiz kann mithilfe der folgenden Notation erstellt werden, wobei
 hier das Ergebnis einzig und allein von einer Zufallszahl abhängig ist. Das
-zusätzliche `script`-tag kann aber auch bei den anderen Quizzen genutzt werden,
-um die Eingaben zu prüfen, wie zum Beispiel unterschiedliche Schreibweisen in
-einem Text-Quiz. Jedoch sei hier auch auf die
+zusätzliche `script`-tag kann aber auch bei den anderen Quiz-Typen genutzt
+werden, um Eingaben zu prüfen, wie zum Beispiel unterschiedliche Schreibweisen
+in einem Text-Quiz. Jedoch sei hier auch auf die
 [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1)
 von LiaScript verwiesen.
 
@@ -1208,7 +1209,7 @@ live im Browser beim Besucher geladen und interpretiert. LiaScript speichert
 auch keine Zustände auf der Webseite oder nutzt Cookies.
 
                               --{{1}}--
-Kurse können überall gehostet werden, es wird nur der Verweis aus das jeweilige
+Kurse können überall gehostet werden, es wird nur der Verweis auf das jeweilige
 Markdown-Dokument benötigt. Hierfür eignet sich GitHub besonders, Kurse können
 hier in mehreren Versionen vorliegen und es können auch private Projekte
 angelegt werden, die nicht von jedem eingesehen werden können.
