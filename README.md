@@ -1217,7 +1217,8 @@ Inhalte nach eigenem Belieben und Ermessen verändern und mit anderen Menschen
 Teilen.
 
 
-1. LiaScript ist eine reine client-seitige Implementierung in JavaScript (elm)
+1. LiaScript ist eine reine client-seitige Implementierung in JavaScript
+   ([Elm](https://elm-lang.org/))
 2. Kurse können überall gehostet werden
    (bevorzug auf [GitHub](https://github.com))
 3. Jeder behält die Rechte an seinem Kurs
@@ -1225,5 +1226,5 @@ Teilen.
 
 ## Kontakt
 
-| André Dietrich | andre.dietrich@ovgu.de |
-| Sebastian Zug  | todo                   |
+| André Dietrich | andre.dietrich@ovgu.de                  |
+| Sebastian Zug  | sebastian.zug@informatik.tu-freiberg.de |
