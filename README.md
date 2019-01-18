@@ -144,6 +144,7 @@ if(window["running"]) {
 >
 > __2.__ Schalten Sie den Ton für die Sprachausgabe ein.
 
+
                              --{{1}}--
 LiaScript ist eine Erweiterung der Auszeichnungssprache
 [Markdown](https://de.wikipedia.org/wiki/Markdown). Das ursprüngliche  Ziel von
@@ -167,10 +168,10 @@ Ungeordnete Listen sehen wie folgt aus:
 ## Abschnitt: Zitate
 
 > Blockzitate werden
-> folgendermaßen definiert.
+> folgendermaßen definiert...
 >
-> Und können auf mehrere Absätze aufgeteilt
-> werden, wenn Sie mögen.
+> ... und können auf mehrere Absätze
+> aufgeteilt werden, wenn Sie mögen.
 
 ## Abschnitt: Tabellen
 
@@ -264,7 +265,7 @@ __Resultat:__
 
 
                              --{{2}}--
-Zum einfügen von Audio-Elementen in LiaScript muss nur ein Fragezeichen
+Zum Einfügen von Audio-Elementen in LiaScript muss nur ein Fragezeichen
 vorangestellt werden, welches mit etwas Fantasie auch als stilisiertes Ohr
 interpretiert werden kann.
 
@@ -479,7 +480,7 @@ angepasst werden können:
 
 
                              --{{1}}--
-Text-Quizze werden durch doppelte eckige Klammern definiert, die jeweilige
+Text-Quizze werden durch doppelt eckige Klammern definiert, die jeweilige
 Lösung schon enthalten. Diese Lösung ist für den Schüler nicht sichtbar, er kann
 seine Eingaben mehrfach prüfen und gegebenenfalls die Auflösung anfordern:
 
@@ -589,7 +590,7 @@ genauso wie bei einem Text-Quiz möglich.
 
                              --{{4}}--
 Mehrere Auswahloptionen und damit Multiple-Choice-Quizze können durch eine
-Gruppe so genannter Check-Buttons angegeben werden. Dabei können auch alle
+Gruppe sogenannter Check-Buttons angegeben werden. Dabei können auch alle
 Elemente durch ein `X` markiert sein oder keines.
 
 
@@ -622,7 +623,7 @@ Elemente durch ein `X` markiert sein oder keines.
                              --{{5}}--
 Generische Quizze können mithilfe der folgenden Notation erstellt werden, wobei
 hier das Ergebnis einzig und allein von einer Zufallszahl abhängig ist. Das
-zusätzliche `script`-tag kann aber auch bei den anderen Quizzen genutzt werden
+zusätzliche `script`-tag kann aber auch bei den anderen Quizzen genutzt werden,
 um die Eingaben zu prüfen, wie zum Beispiel unterschiedliche Schreibweisen in
 einem Text-Quiz. Jedoch sei hier auch auf die
 [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1)
@@ -723,8 +724,8 @@ else {
 
                              --{{2}}--
 Da es möglich ist JavaScript und verschiedene Bibliotheken einzubinden, können
-auch unterschiedliche Programmiersprachen unterstützt werden, wie zum Beispiel C
-mithilfe der [rextester-API](https://rextester.com/main).
+auch unterschiedliche Programmiersprachen unterstützt werden, wie zum Beispiel
+_C_ mithilfe der [rextester-API](https://rextester.com/main).
 
                               {{2-3}}
 ``` c source_file.c
@@ -745,7 +746,7 @@ int main()
 
                              --{{3}}--
 Auch die Kombination mit anderen Sprachen und Visualisierungen ist möglich, wie
-hier zum Beispiel mit [Processing](https://de.wikipedia.org/wiki/Processing):
+hier zum Beispiel mit [_Processing_](https://de.wikipedia.org/wiki/Processing):
 
                                {{3}}
 ``` cpp ABSTRACT01js
@@ -1111,54 +1112,55 @@ Seite in verschiedene Fragmente, sowie die Nutzung der Sprachausgabe.
                               --{{1}}--
 Falls Sie es noch nicht bemerkt haben, oben in der rechten Ecke befindet sich
 ein Knopf, der es erlaubt zwischen den unterschiedlichen Darstellungsmodi zu
-wechseln. Diese Option kommt frei Haus und sie können selber entscheiden ob sie
-lieber den Erklärtext wie in ein Präsentation hören oder lieber ein Buch lesen.
+wechseln. Diese Option kommt frei Haus und sie können selber entscheiden, ob sie
+lieber den Erklärtext wie in einer Präsentation hören oder lieber ein Buch
+lesen.
 
 1. Präsentation (mit Text2Speech)
 2. Folien (mit Notizen)
-3. Lehrbuch (ohne Fragmente)
+3. Lehrbuch (ohne Fragmente und Sprachausgabe)
 
 
 ### Fragmente
 
                               --{{0}}--
-Um Fragmente zu definieren muss nur die jeweilige Fragmentnummer in doppelt
-geschweifte Klammern geschrieben werden und einem Markdown-Block voran
-gestellt. Eine zweite Zahl nach einem Minus definiert, bei welchem Punkt das
-Fragment wieder ausgeblendet wird. Innerhalb eines Blocks können auch einzelne
-Elemente aufgedeckt werden, dazu muss die doppelt geschweifte Klammer nur
-ausgepackt werden, wobei die zweiten Klammern das oder die jeweiligen Elemente
-umschließen die ein beziehungsweise ausgeblendet werden sollen.
+Um Fragmente zu definieren, muss nur die jeweilige Fragment-Nummer in doppelt
+geschweifte Klammern geschrieben werden und einem Markdown-Block vorangestellt.
+Eine zweite Zahl nach einem Minus definiert, bei welchem Punkt das Fragment
+wieder ausgeblendet wird. Innerhalb eines Blocks können auch einzelne Elemente
+aufgedeckt werden, dazu muss die doppelt geschweifte Klammer nur ausgepackt
+werden, wobei die zweiten Klammern das oder die jeweiligen Elemente umschließen,
+die ein- beziehungsweise ausgeblendet werden sollen.
 
 ``` markdown
                   {{1}}
-Dieser Text erscheint zu {3}{__aller__ } erst.
+Dieser Text erscheint zu{3}{__aller__}erst.
 
 
 {{2-4}} Dieser Block erscheint als zweites
 Fragment und verschwindet bei Punkt 4.
 
-Ich bin immer a ...
+Ich bin immer da ...
 
-{{4}} Ich komme zu letzt.
+{{4}} Ich komme zuletzt.
 ```
 
                                {{1}}
-Dieser Text erscheint zu {3}{__aller__}erst.
+Dieser Text erscheint zu{3}{__aller__}erst.
 
 
 {{2-4}} Dieser Block erscheint als zweites
 Fragment und verschwindet bei Punkt 4.
 
-Ich bin immer a ...
+Ich bin immer da ...
 
-{{4}} Ich komme zu letzt.
+{{4}} Ich komme zuletzt.
 
 
 ### Sprache
 
                               --{{0}}--
-Die Sprachausgabe erfolgt mit Hilfe von
+Die Sprachausgabe erfolgt mithilfe von
 [ResponsiveVoice](http://responsivevoice.org). In initialen Kommentar-Tag kann
 die Standardstimme definiert werden, diese kann je Abschnitt und Sprachausgabe
 auch geändert werden. Die Kommentarfunktion kann als Erweiterung der
@@ -1181,7 +1183,7 @@ Dieser Text wird deutsch ausgesprochen.
 
 
      --{{2 UK English Male}}--
-I should speak with an UK like accent.
+I should speak with a UK like accent.
 
      --{{3 Russian Female}}--
 Я говорю по-русски с женским голосом.
@@ -1192,7 +1194,7 @@ Dieser Text wird deutsch ausgesprochen.
 
 
                       --{{2 UK English Male}}--
-I should speak with an UK like accent.
+I should speak with a UK like accent.
 
                        --{{3 Russian Female}}--
 Я говорю по-русски с женским голосом.
@@ -1217,12 +1219,25 @@ Inhalte nach eigenem Belieben und Ermessen verändern und mit anderen Menschen
 Teilen.
 
 
-1. LiaScript ist eine reine client-seitige Implementierung in JavaScript
+1. LiaScript ist eine reine clientseitige Implementierung in JavaScript
    ([Elm](https://elm-lang.org))
 2. Kurse können überall gehostet werden
-   (bevorzug auf [GitHub](https://github.com))
+   (bevorzugt auf [GitHub](https://github.com))
 3. Jeder behält die Rechte an seinem Kurs
 
+## Werkzeuge
+
+                              --{{0}}--
+Derzeit existieren zwei Plugins für [Atom](https://atom.io), den freien Editor
+von [GitHub](https://github.com). Diese sollen den Einstieg und die Entwicklung
+von Kursen in LiaScript vereinfachen.
+
+__[Atom](https://atom.io) Editor-Plugins:__
+
+1. liascript-preview: https://atom.io/packages/liascript-preview
+2. liascript-snippets: https://atom.io/packages/liascript-snippets
+
+![Preview](https://raw.githubusercontent.com/andre-dietrich/liascript-preview/master/preview.gif)<!-- width="100%"-->
 
 ## Kontakt
 
