@@ -140,24 +140,24 @@ if(window["running"]) {
 
 
                               {{0-1}}
-> Nutzen Sie die oberen Pfeile um im Kurs weiterzugehen.
+> 1. Nutzen Sie die oberen Pfeile um im Kurs weiter zugehen.
 >
-> Und schalten Sie den Ton für die Sprachausgabe ein.
+> 2. Schalten Sie den Ton für die Sprachausgabe ein.
 
                              --{{1}}--
 LiaScript ist eine Erweiterung der Auszeichnungssprache
 [Markdown](https://de.wikipedia.org/wiki/Markdown). Das ursprüngliche  Ziel von
 Markdown war es, die Ausgangsform auch ohne weitere Konvertierung für einen
-Menschen leicht lesbar un damit auch editierbar zu machen.
+Menschen leicht lesbar und damit auch editierbar zu machen.
 
 
                               {{1-2}}
 ```markdown Markdown-Beispiel.md
 # Überschrift
 
-Paragraphen werden durch eine Leerzeile voneinander getrennt.
+Absätze werden durch eine Leerzeile voneinander getrennt.
 
-2ter Paragraph. *Kursiv*, **fett**, und `Monospace`.
+2ter Absatz. *Kursiv*, **fett**, und `Monospace`.
 Ungeordnete Listen sehen wie folgt aus:
 
 * dieses
@@ -167,9 +167,9 @@ Ungeordnete Listen sehen wie folgt aus:
 ## Abschnitt: Zitate
 
 > Blockzitate werden
-> folgender maßen definiert.
+> folgendermaßen definiert.
 >
-> Und können auf mehrere Paragraphen aufgeteilt
+> Und können auf mehrere Absätze aufgeteilt
 > werden, wenn Sie mögen.
 
 ## Abschnitt: Tabellen
@@ -195,16 +195,16 @@ ein integriertes Macro-System auch wiederverwendbare Komponenten kapseln.
 
 
                                {{2}}
-* Project-Webseite:
+* Projekt-Webseite:
   https://LiaScript.github.io
 * Dieser Kurs auf:
-  * GitHub --> TODO
-  * LiaScript --> TODO
+  * GitHub --> https://github.com/LiaScript/Demo
+  * LiaScript --> https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/demo/master/README.md#1
 
 
 ## Erweiterungen
 
-                              --{{0}}--
+                             --{{0}}--
 Auf den folgenden Seiten sollen kurz einige Erweiterungen vorgestellt werden.
 Für eine ausführliche Erläuterung zu allen Möglichkeiten sei jedoch auf die
 [LiaScript Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1)
@@ -217,7 +217,7 @@ auf der Projekt-Seite verwiesen.
 
                              --{{0}}--
 Markdown unterstützt von Haus aus zwei Typen von Verweisen, dazu zählen
-einerseits einfache Links auf externe oder interne Seiten, die wie folgt
+einerseits einfache Links auf externe oder interne Seiten, die wie folgt,
 definiert werden:
 
 
@@ -227,25 +227,25 @@ definiert werden:
 __Markdown-Code: (Verweis)__
 
 ``` markdown
-* direkte Verweise:
+* Direkter Verweis:
   https://LiaScript.github.io
 
-* Formatierte Verweise:
+* Formatierter Verweis:
   [Link zu LiaScript](https://LiaScript.github.io)
 ```
 
 __Resultat:__
 
-* direkte Verweise: https://LiaScript.github.io
-* Formatierte Verweise: [Link zu LiaScript](https://LiaScript.github.io)
+* Direkter Verweis: https://LiaScript.github.io
+* Formatierter Verweis: [Link zu LiaScript](https://LiaScript.github.io)
 
 *******************************************************************************
 
-                              --{{1}}--
+                             --{{1}}--
 Bilder werden wie Verweise behandelt, nur das hier ein Ausrufezeichen vor den
 formatierten Verweis gestellt werden muss:
 
-                                  {{1-2}}
+                              {{1-2}}
 *******************************************************************************
 
 __Markdown-Code: (Bild)__
@@ -263,12 +263,12 @@ __Resultat:__
 *******************************************************************************
 
 
-                                 --{{2}}--
+                             --{{2}}--
 Zum einfügen von Audio-Elementen in LiaScript muss nur ein Fragezeichen
 vorangestellt werden, welches mit etwas Fantasie auch als stilisiertes Ohr
 interpretiert werden kann.
 
-                                  {{2-3}}
+                              {{2-3}}
 *******************************************************************************
 
 __LiaScript-Code: (Audio)__
@@ -284,14 +284,14 @@ __Resultat:__
 *******************************************************************************
 
 
-                                --{{3}}--
+                             --{{3}}--
 Und kombiniert man Bild und Ton, so kann man auch Videos einfügen. Diese beiden
 Optionen sind sonst unter Markdown nicht gegeben. Der Vorteil bei dieser
-Darstellung ist auch, dass die Referenzen mit einem anderen Markdown-Interpreter
-immernoch als Verweise dargestellt werden.
+Darstellung ist auch, dass die Referenzen mit einem anderen Markdown-Viewer
+immer noch als Verweise dargestellt werden.
 
 
-                                 {{3-4}}
+                              {{3-4}}
 *******************************************************************************
 
 __LiaScript-Code: (Video)__
@@ -309,7 +309,7 @@ __Resultat:__
 
 *******************************************************************************
 
-                                 --{{4}}--
+                             --{{4}}--
 Dem aufmerksamen Betrachter wird nicht entfallen sein, dass in manchen
 Beispielen HTML-Kommentare mit zusätzlichen HTML-Annotationen enthalten waren.
 Dies ist eine Möglichkeit, jedes Element, sei es Text, Bild, Tabelle oder Video,
@@ -318,14 +318,14 @@ definiert die Attribute für einen ganzen Block, während ein hinten angestellte
 nur die Eigenschaften des vorangegangenen Elementes verändert.
 
 
-                                    {{4}}
+                               {{4}}
 *******************************************************************************
 
 __LiaScript-Code: (Annotationen)__
 
 ``` markdown
 <!--style="color: red"-->
-Dieser ganze Paragraph ist in rot gefasst ;-)<!--
+Dieser ganze Absatz ist in Rot gefasst ;-)<!--
 class="animated infinite bounce"
 style="animation-delay: 3s;"
 -->, mit Ausnahme diese Smileys, dass nach drei
@@ -335,7 +335,7 @@ Sekunden zu hüpfen beginnt.
 __Resultat:__
 
 <!--style="color: red"-->
-Dieser ganze Paragraph ist in rot gefasst ;-)<!--
+Dieser ganze Absatz ist in Rot gefasst ;-)<!--
 class="animated infinite bounce"
 style="animation-delay: 3s;"
 -->, mit Ausnahme diese Smileys, dass nach drei
@@ -343,16 +343,16 @@ Sekunden zu hüpfen beginnt.
 
 *******************************************************************************
 
-                                  --{{5}}--
-Damit lassen sich auch komplexe Annimationsabläufe definieren, während der Text
+                             --{{5}}--
+Damit lassen sich auch komplexe Animationsabläufe definieren, während der Text
 mit einem anderen Markdown-Viewer noch lesbar bleibt, da Kommentare von diesen
 einfach ignoriert werden.
 
 
 ### ASCII-Art 1
 
-                              --{{0}}--
-Aus unserer Erfahrung wissen wir, das Bilder häufig zur Darstellung von
+                             --{{0}}--
+Aus unserer Erfahrung wissen wir, dass Bilder häufig zur Darstellung von
 einfachen Signalverläufen, Trends, Funktionen, also Diagrammen genutzt werden.
 Diese müssen meist aufwendig mit Excel, Gnuplot, Matlab oder anderen Werkzeugen
 erstellt und exportiert werden. LiaScript bietet hierzu auch die Möglichkeit
@@ -375,13 +375,13 @@ verändern und man muss nicht sein "Werkzeug" wechseln.
 ```
 
 
-                               --{{1}}--
+                             --{{1}}--
 Das konvertierte Ergebnis ist ein grafisch ansehnliches Diagramm, in dem die
 Farben und die Form und Größe der Punkte jeweils durch die ursprünglichen
 Buchstaben kodiert sind.
 
 
-                        {{1}}
+                               {{1}}
                        Der Titel ist optional
     1.9 |    DotS
         |                 ***
@@ -398,7 +398,7 @@ Buchstaben kodiert sind.
 
 ### ASCII-Art 2
 
-                           --{{0}}--
+                             --{{0}}--
 Wer möchte, der kann auch noch kompliziertere Sachverhalte, wie zum Beispiel
 Graphen, UML-Diagramme mithilfe von einfachen Textbausteinen generieren.
 
@@ -421,12 +421,12 @@ Graphen, UML-Diagramme mithilfe von einfachen Textbausteinen generieren.
              B --> C -'
 `````````````````````````````````````
 
-                                --{{1}}--
-Und dazu auch alle möglichen UniCode-Zeichen nutzen. Da LiaScript international
+                             --{{1}}--
+Und dazu auch alle möglichen Unicode-Zeichen nutzen. Da LiaScript international
 ist und somit auch chinesischen, griechische, arabische oder anderweitige
-Zeichen und Symbole interpetieren kann.
+Zeichen und Symbole interpretieren kann.
 
-                                 {{1}}
+                               {{1}}
 *******************************************************************
 
 ```
@@ -465,26 +465,26 @@ Zeichen und Symbole interpetieren kann.
 
 ### Quizze
 
-                            --{{0}}--
+                             --{{0}}--
 Quizze sind eine gute Möglichkeit dem Schüler kurz nochmal die Möglichkeit zu
 geben, sein Wissen bezüglich eines aktuellen Lernmoduls zu überprüfen. LiaScript
 unterstützt grundsätzlich 4 Quiz-Typen, die durch zusätzliche Elemente
 angepasst werden können:
 
-      {{0-1}}
+                              {{0-1}}
 1. Texteingaben
 2. Single-Choice
 3. Multiple-Choice
 4. Freie, mithilfe von JavaScript
 
 
-                                --{{1}}--
+                             --{{1}}--
 Text-Quizze werden durch doppelte eckige Klammern definiert, die jeweilige
 Lösung schon enthalten. Diese Lösung ist für den Schüler nicht sichtbar, er kann
 seine Eingaben mehrfach prüfen und gegebenenfalls die Auflösung anfordern:
 
 
-                                   {{1-2}}
+                              {{1-2}}
 *******************************************************************************
 
 ``` markdown TextQuiz
@@ -502,13 +502,13 @@ seine Eingaben mehrfach prüfen und gegebenenfalls die Auflösung anfordern:
 *******************************************************************************
 
 
-                                  --{{2}}--
+                             --{{2}}--
 Hinweise können in der dargestellten Notation an jeden Quiz-Typ angehängt
 werden, beziehungsweise kann auch jedes Quiz mit einer erweiterten Erklärung zur
 Auflösung versehen werden. Diese Erklärung muss nur in einen Block
 eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
 
-                             {{2-3}}
+                              {{2-3}}
 *******************************************************************************
 
 ``` markdown TextQuiz
@@ -516,12 +516,12 @@ eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
 
     [[LiaScript]]
     [[?]] Es handelt sich dabei um eine neue Sprache...
-    [[?]] Diese wurde speziell zur Erstellung von online-Kursen konzipiert.
-    [[?]] Das L und das S müssen jeweils groß geschrieben werden.
+    [[?]] Diese wurde speziell zur Erstellung von online-Kursen entwickelt.
+    [[?]] Das __L__ und das __S__ müssen jeweils groß geschrieben werden.
     **************************
 
     Diese zusätzliche Auflösung ist optional und kann so __viele__
-    Markdown-Blöcke und Paragraphen, Bilder, Videos oder Formeln
+    Markdown-Blöcke und Absätze, Bilder, Videos oder Formeln
     enthalten, wie sie wünschen ...
 
     $$
@@ -538,12 +538,12 @@ eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
 
     [[LiaScript]]
     [[?]] Es handelt sich dabei um eine neue Sprache...
-    [[?]] Diese wurde speziell zur Erstellung von online-Kursen konzipiert.
-    [[?]] Das L und das S müssen jeweils groß geschrieben werden.
+    [[?]] Diese wurde speziell zur Erstellung von online-Kursen entwickelt.
+    [[?]] Das __L__ und das __S__ müssen jeweils groß geschrieben werden.
     **************************
 
     Diese zusätzliche Auflösung ist optional und kann so __viele__
-    Markdown-Blöcke und Paragraphen, Bilder, Videos oder Formeln
+    Markdown-Blöcke und Absätze, Bilder, Videos oder Formeln
     enthalten, wie sie wünschen ...
 
     $$
@@ -557,7 +557,7 @@ eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
 
 
                              --{{3}}--
-Single-Choice Quizze werden durch stilisierte Radio-Buttons dargestellt, wobei
+Single-Choice-Quizze werden durch stilisierte Radio-Buttons dargestellt, wobei
 hier das `X` markiert, welche Lösung die richtige ist. Hierbei darf auch nur
 eine Zeile ein `X` enthalten. Erweiterungen um Hinweise und Auflösungen sind
 genauso wie bei einem Text-Quiz möglich.
@@ -587,16 +587,16 @@ genauso wie bei einem Text-Quiz möglich.
 *******************************************************************************
 
 
-                              --{{4}}--
+                             --{{4}}--
 Mehrere Auswahloptionen und damit Multiple-Choice-Quizze können durch eine
 Gruppe so genannter Check-Buttons angegeben werden. Dabei können auch alle
-Elemete durch ein `X` markiert sein oder keines.
+Elemente durch ein `X` markiert sein oder keines.
 
 
-                                {{4-5}}
+                              {{4-5}}
 *******************************************************************************
 
-``` markdown Single-Choice-Quiz
+``` markdown Multiple-Choice-Quiz
 **Welche Antworten treffen zu?**
 
     [[ ]] Antwort 1
@@ -619,16 +619,17 @@ Elemete durch ein `X` markiert sein oder keines.
 *******************************************************************************
 
 
-                                --{{5}}--
+                             --{{5}}--
 Generische Quizze können mithilfe der folgenden Notation erstellt werden, wobei
 hier das Ergebnis einzig und allein von einer Zufallszahl abhängig ist. Das
-zusätzliche script-tag kann aber auch bei den anderen Quizzen genutzt werden um
-die Eingaben zu prüfen, wie zum Beispiel unterschiedliche Schreibweisen in einem
-Text-Quiz. Jedoch sei hier auch auf die Dokumentation von LiaScript verwiesen.
+zusätzliche `script`-tag kann aber auch bei den anderen Quizzen genutzt werden
+um die Eingaben zu prüfen, wie zum Beispiel unterschiedliche Schreibweisen in
+einem Text-Quiz. Jedoch sei hier auch auf die
+[Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1)
+von LiaScript verwiesen.
 
 
-
-                                  {{5}}
+                               {{5}}
 *******************************************************************************
 
 ``` markdown Generisches Quiz
@@ -651,20 +652,19 @@ Text-Quiz. Jedoch sei hier auch auf die Dokumentation von LiaScript verwiesen.
         false;
     </script>
 
-
 *******************************************************************************
 
 
 ### Programmierung
 
-                                --{{0}}--
-Durch die folgende Syntax können mehrere Standard Markdown Code-Blöcke zu einem
+                             --{{0}}--
+Durch die folgende Syntax können mehrere standard Markdown Code-Blöcke zu einem
 Projekt zusammengefasst werden. Die unterschiedlichen Dateien können mit einem
 Namen versehen werden und lassen sich auf und zu klappen. Das zusätzliche
-script-tag am Ende weist diese Blöcke als ausführbaren Code aus und definiert
-was mit den Inhalten der einzelnen Blöcke zu verfahren ist.
+`script`-tag am Ende weist diese Blöcke als ausführbaren Code aus und definiert
+wie mit den Inhalten der einzelnen Blöcke zu verfahren ist.
 
-                     {{0-1}}
+                              {{0-1}}
 ``` markdown
 ` ` ` js     -EvalScript.js
 let who = data.first_name + " " + data.last_name;
@@ -690,13 +690,13 @@ else {
 </script>
 ```
 
-                                 --{{1}}--
-Die LiaScript-Interpetation dieser Blöcke sieht dann wie folgt aus. Alle Dateien
-sind editierbar und es wird, um Änderungen zu verfolgen, auch ein eigenes
-lineares Versions-Management-System genutzt. Probieren Sie es aus, verändern Sie
-den Code und kehren zu früheren Versionen zurück.
+                             --{{1}}--
+Die LiaScript-Interpretation dieser Blöcke sieht dann wie folgt aus. Alle
+Dateien sind editierbar und es wird, um Änderungen zu verfolgen, auch ein
+eigenes lineares Versions-Management-System genutzt. Probieren Sie es aus,
+verändern Sie den Code und kehren zu früheren Versionen zurück.
 
-                  {{1-2}}
+                              {{1-2}}
 ``` js     -EvalScript.js
 let who = data.first_name + " " + data.last_name;
 
@@ -721,12 +721,12 @@ else {
 </script>
 
 
-                                --{{2}}--
+                             --{{2}}--
 Da es möglich ist JavaScript und verschiedene Bibliotheken einzubinden, können
 auch unterschiedliche Programmiersprachen unterstützt werden, wie zum Beispiel C
-mithilfe der rextester-API.
+mithilfe der [rextester-API](https://rextester.com/main).
 
-                 {{2-3}}
+                              {{2-3}}
 ``` c source_file.c
 #include <stdio.h>
 int main()
@@ -743,11 +743,11 @@ int main()
 @Rextester.eval
 
 
-                              --{{3}}--
+                             --{{3}}--
 Auch die Kombination mit anderen Sprachen und Visualisierungen ist möglich, wie
-hier zum Beispiel mit Processing:
+hier zum Beispiel mit [Processing](https://de.wikipedia.org/wiki/Processing):
 
-                                {{3}}
+                               {{3}}
 ``` cpp ABSTRACT01js
 int num,cnt,px,py,fadeInterval;
 Particle[] particles;
@@ -1091,7 +1091,7 @@ class Vec2D {
 @processing(ABSTRACT01js)
 
 
-                                 --{{4}}--
+                               --{{4}}--
 Für solche JavaScript-Bibliotheken und auch zur Nutzung anderer Funktionalitäten
 bieten wir Templates an, die über ein eigenes Macro-System implementiert wurden.
 Diese können frei übernommen werden und minimieren auch den Bruch beim lesen des
@@ -1100,7 +1100,7 @@ originalen Markdown-Dokumentes.
 
 ## Ausgaben
 
-                                  --{{0}}--
+                              --{{0}}--
 Wir haben es fast geschafft, das was jetzt noch fehlt, ist die Aufteilung einer
 Seite in verschiedene Fragmente, sowie die Nutzung der Sprachausgabe.
 
@@ -1108,30 +1108,30 @@ Seite in verschiedene Fragmente, sowie die Nutzung der Sprachausgabe.
 {{0-1}}![boring](https://media.giphy.com/media/HlqvH9JrahLZ6/giphy.gif)<!-- width="100%" -->
 
 
-                    --{{1}}--
+                              --{{1}}--
 Falls Sie es noch nicht bemerkt haben, oben in der rechten Ecke befindet sich
 ein Knopf, der es erlaubt zwischen den unterschiedlichen Darstellungsmodi zu
 wechseln. Diese Option kommt frei Haus und sie können selber entscheiden ob sie
 lieber den Erklärtext wie in ein Präsentation hören oder lieber ein Buch lesen.
 
-1. Präsentation
-2. Folien
-3. Lehrbuch
+1. Präsentation (mit Text2Speech)
+2. Folien (mit Notizen)
+3. Lehrbuch (ohne Fragmente)
 
 
 ### Fragmente
 
-                        --{{0}}--
+                              --{{0}}--
 Um Fragmente zu definieren muss nur die jeweilige Fragmentnummer in doppelt
-geschweifte Klammern geschrieben werden und einem Markdown-Block vorran
+geschweifte Klammern geschrieben werden und einem Markdown-Block voran
 gestellt. Eine zweite Zahl nach einem Minus definiert, bei welchem Punkt das
 Fragment wieder ausgeblendet wird. Innerhalb eines Blocks können auch einzelne
-Elemete aufgedeckt werden, dazu muss die doppelt geschweifte Klammer nur
+Elemente aufgedeckt werden, dazu muss die doppelt geschweifte Klammer nur
 ausgepackt werden, wobei die zweiten Klammern das oder die jeweiligen Elemente
 umschließen die ein beziehungsweise ausgeblendet werden sollen.
 
 ``` markdown
-                   {{1}}
+                  {{1}}
 Dieser Text erscheint zu {3}{__aller__ } erst.
 
 
@@ -1143,7 +1143,7 @@ Ich bin immer a ...
 {{4}} Ich komme zu letzt.
 ```
 
-{{1}}
+                               {{1}}
 Dieser Text erscheint zu {3}{__aller__}erst.
 
 
@@ -1157,14 +1157,16 @@ Ich bin immer a ...
 
 ### Sprache
 
-Die Sprachausgabe erfolgt mit Hilfe von [ResponsiveVoice](todo). In initialen
-Kommentar-Tag kann die Standardstimme definiert werden, diese kann je Abschnitt
-und Sprachausgabe auch geändert werden. Die Kommentarfunktion kann als
-Erweiterung der Fragment-Notation interpretiert werden und muss in doppelte
-Minuszeichen eingefügt werden. Sozusagen, die Erläuterung zu einem bestimmten
-Unterpunkt. Innerhalb eines Kommentars kann auch die Sprachausgabe geändert
-werden. Auf diese Weise lassen sich auch Dialoge zwischen unterschiedlichen
-Personen realisieren.
+                              --{{0}}--
+Die Sprachausgabe erfolgt mit Hilfe von
+[ResponsiveVoice](http://responsivevoice.org). In initialen Kommentar-Tag kann
+die Standardstimme definiert werden, diese kann je Abschnitt und Sprachausgabe
+auch geändert werden. Die Kommentarfunktion kann als Erweiterung der
+Fragment-Notation interpretiert werden und muss in doppelte Minuszeichen
+eingefügt werden. Sozusagen, die Erläuterung zu einem bestimmten Unterpunkt.
+Innerhalb eines Kommentars kann auch die Sprachausgabe geändert werden. Auf
+diese Weise lassen sich auch Dialoge zwischen unterschiedlichen Personen
+realisieren.
 
 ``` markdown
 <!--
@@ -1185,17 +1187,43 @@ I should speak with an UK like accent.
 Я говорю по-русски с женским голосом.
 ```
 
-              --{{1}}--
+                             --{{1}}--
 Dieser Text wird deutsch ausgesprochen.
 
 
-      --{{2 UK English Male}}--
+                      --{{2 UK English Male}}--
 I should speak with an UK like accent.
 
-      --{{3 Russian Female}}--
+                       --{{3 Russian Female}}--
 Я говорю по-русски с женским голосом.
 
 
 ## Abschließende Worte
 
-Todo
+                              --{{0}}--
+LiaScript ist eine reine JavaScript-Implementierung, das heißt, der Kurs wird
+live im Browser beim Besucher geladen und interpretiert. LiaScript speichert
+auch keine Zustände auf der Webseite oder nutzt Cookies.
+
+                              --{{1}}--
+Kurse können überall gehostet werden, es wird nur der Verweis aus das jeweilige
+Markdown-Dokument benötigt. Hierfür eignet sich GitHub besonders, Kurse können
+hier in mehreren Versionen vorliegen und es können auch private Projekte
+angelegt werden, die nicht von jedem eingesehen werden können.
+
+                              --{{2}}--
+Jeder der einen Kurs erstellt, behält auch all seine Rechte daran und kann seine
+Inhalte nach eigenem Belieben und Ermessen verändern und mit anderen Menschen
+Teilen.
+
+
+1. LiaScript ist eine reine client-seitige Implementierung in JavaScript (elm)
+2. Kurse können überall gehostet werden
+   (bevorzug auf [GitHub](https://github.com))
+3. Jeder behält die Rechte an seinem Kurs
+
+
+## Kontakt
+
+| André Dietrich | andre.dietrich@ovgu.de |
+| Sebastian Zug  | todo                   |
