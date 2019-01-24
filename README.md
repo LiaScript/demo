@@ -134,6 +134,28 @@ if(window["running"]) {
 </script>
 @end
 
+
+script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
+
+link: https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
+
+
+@Chartist: @Chartist.__full(@uid,@0)
+
+@Chartist.__full
+<div class="ct-chart ct-golden-section" id="chart@0">
+</div>
+<script>
+  setTimeout(function(){
+    alert("fuck1");
+    let x = new Chartist.Line('#chart@0', @1);
+    alert("fuck");
+  }, 1000);
+</script>
+
+@end
+
+
 -->
 
 # LiaScript: Demo
@@ -656,8 +678,138 @@ von LiaScript verwiesen.
 
 *******************************************************************************
 
+## Weitere Features
 
-### Programmierung
+                             --{{0}}--
+Auf den vorhergehenden Seiten wurden sprachliche Erweiterungen von Markdown
+vorgestellt. Das Internet bietet aber weitaus mehr Möglichkeiten, die für einen
+Kurs von interesse sein könnten. LiaScript erlaubt es, im Gegensatz zu anderen
+Markdown-Interpretern, auch JavaScript, HTML und CSS auf verschiedenste Art und
+Weise zu integrieren. Außerdem bietet LiaScript eine eigene Macro-Notation um
+wiederkehrende und aufwendige Aufgaben zu automatisieren.
+
+![Homer's Web Page](https://media.giphy.com/media/fJKG1UTK7k64w/giphy.gif)<!-- width="100%"-->
+
+### JavaScript und HTML
+
+                             --{{0}}--
+Wer mit den Möglichkeiten von Markdown nicht zufrieden ist, kann auch HTML,
+JavaScript und CSS Elemente direkt einfügen. Um externe Bibliotheken zu laden,
+müssen diese im "Haupt"-Kommentar des Dokumentes oder des Abschnittes definiert
+sein. Handelt es sich um eine JavaScript-Bibliothek so muss das Schlüsselwort
+`script` verwendet werden und bei einem Style-Sheet das Schlüsselwort `link`.
+
+``` html
+<!--
+script: https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
+        https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
+
+link:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
+-->
+```
+
+                             --{{1}}--
+Danach kann überall im Dokument auf die eingefügte Funktionalität mit
+zugegriffen werden. Das nun dargestellte Beispiel nutzt die
+JavaScript-Bibliothek [Chartist](todo) um einen einfachen Graphen zu plotten.
+
+                               {{1}}
+``` html
+<div class="ct-chart ct-golden-section" id="chart">
+</div>
+
+<script>
+  // Initialize a Line chart in the container with
+  // the ID chart
+  new Chartist.Line('#chart', {
+    labels: [1, 2, 3, 4],
+    series: [[100, 120, 180, 200]]
+  });
+</script>
+```
+
+                             --{{2}}--
+Der erzeugte Graph sieht dann wie folgt aus ...
+
+                               {{2}}
+<div class="ct-chart ct-golden-section" id="chart"></div>
+<script>
+setTimeout(function(){
+  new Chartist.Line('#chart', {
+    labels: [1, 2, 3, 4],
+    series: [[100, 120, 180, 200]]
+  });
+}, 300);
+</script>
+
+
+### Macros
+
+
+                             --{{0}}--
+Im Abschnitt [Quizze](#3) wurde bereits das `@input`-Macro genutzt um die
+Stellen zu markieren, die durch die Nutzereingaben ersetzt werden sollen. Ein
+Macro beginnt immer mit einem `@`-Symbol und kann im  "Haupt"-Kommentar eines
+Dokumentes definiert werden. Macros beschreiben einfache Regeln für die
+Textersetzung, diese können entweder als Single-line oder Multi-line definiert
+werden (Letzteres muss mit einem `@end` abgeschlossen werden). Wie im Beispiel
+dargestellt, kann ein Macro auch wieder andere Macros aufrufen und Parameter
+werden über `@0` bis `@n` aufgerufen.
+
+
+``` html
+<!--
+
+...
+
+@Chartist: @Chartist.__full(@uid,@0)
+
+@Chartist.__full
+<div class="ct-chart ct-golden-section" id="chart@0">
+</div>
+<script>
+  new Chartist.Line('#chart@0', @1);
+</script>
+
+@end
+
+-->
+```
+
+
+                             --{{1}}--
+Im Dokument können diese Macros dann wie folgt aufgerufen werden, entweder in einer einfachen _Funktions-Notation_ oder in der _Block-Notation_
+
+
+                               {{1}}
+``` markdown
+@Chartist(`{labels: [1,2,3], series: [[1,3,1]]}`)
+
+` ` `json @Chartist
+{
+  labels: [1, 2, 3, 4, 5, 6, 7],
+  series: [
+    [100, 120, 180, 200, 0, 12, -1],
+    [10, 20, 30, 40, 50, 90, -100]]
+}
+` ` `
+```
+
+           {{2}}
+```json @Chartist.__full(test)
+{
+  labels: [1, 2, 3, 4, 5, 6, 7],
+  series: [
+    [100, 120, 180, 200, 0, 12, -1],
+    [10, 20, 30, 40, 50, 90, -100]]
+}
+```
+
+{{2}}
+@Chartist.__full(test2,`{labels: [1,2,3], series: [[1,3,1]]}`)
+
+
+## Programmierung
 
                              --{{0}}--
 Durch die folgende Syntax können mehrere standard Markdown Code-Blöcke zu einem
@@ -1098,6 +1250,7 @@ Für solche JavaScript-Bibliotheken und auch zur Nutzung anderer Funktionalität
 bieten wir Templates an, die über ein eigenes Macro-System implementiert wurden.
 Diese können frei übernommen werden und minimieren auch den Bruch beim lesen des
 originalen Markdown-Dokumentes.
+
 
 
 ## Ausgaben
