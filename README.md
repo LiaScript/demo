@@ -683,7 +683,8 @@ Wir haben es fast geschafft, das was jetzt noch fehlt, ist die Aufteilung einer
 Seite in verschiedene Fragmente, sowie die Nutzung der Sprachausgabe.
 
 
-{{0-1}}![boring](https://media.giphy.com/media/HlqvH9JrahLZ6/giphy.gif)<!-- width="100%" -->
+                               {{0-1}}
+![boring](https://media.giphy.com/media/HlqvH9JrahLZ6/giphy.gif)<!-- width="100%" -->
 
 
                               --{{1}}--
@@ -1453,5 +1454,7 @@ __[Atom](https://atom.io) Editor-Plugins:__
 
 ## Kontakt
 
+| Name           | eMail                                   |
+|----------------|-----------------------------------------|
 | André Dietrich | andre.dietrich@ovgu.de                  |
 | Sebastian Zug  | sebastian.zug@informatik.tu-freiberg.de |
