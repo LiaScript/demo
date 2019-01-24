@@ -140,21 +140,18 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 link: https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 
-@Chartist: @Chartist.__full(@uid,@0)
-
-@Chartist.__full
+@Chartist
 <div class="ct-chart ct-golden-section" id="chart@0">
 </div>
 <script>
-  setTimeout(function(){
-    alert("fuck1");
-    let x = new Chartist.Line('#chart@0', @1);
-    alert("fuck");
-  }, 1000);
+  $.getScript("https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js", function(){
+    let x = new Chartist.Line('#chart@0', {@1});
+  });
 </script>
 
 @end
 
+@red: <b style="color: red"> @0</b>
 
 -->
 
@@ -678,12 +675,115 @@ von LiaScript verwiesen.
 
 *******************************************************************************
 
-## Weitere Features
+
+## Ausgaben
+
+                              --{{0}}--
+Wir haben es fast geschafft, das was jetzt noch fehlt, ist die Aufteilung einer
+Seite in verschiedene Fragmente, sowie die Nutzung der Sprachausgabe.
+
+
+{{0-1}}![boring](https://media.giphy.com/media/HlqvH9JrahLZ6/giphy.gif)<!-- width="100%" -->
+
+
+                              --{{1}}--
+Falls Sie es noch nicht bemerkt haben, oben in der rechten Ecke befindet sich
+ein Knopf, der es erlaubt zwischen den unterschiedlichen Darstellungsmodi zu
+wechseln. Diese Option kommt frei Haus und sie können selber entscheiden, ob sie
+lieber den Erklärtext wie in einer Präsentation hören oder lieber ein Buch
+lesen.
+
+1. Präsentation (mit Text2Speech)
+2. Folien (mit Notizen)
+3. Lehrbuch (ohne Fragmente und Sprachausgabe)
+
+
+### Fragmente
+
+                              --{{0}}--
+Um Fragmente zu definieren, muss nur die jeweilige Fragment-Nummer in doppelt
+geschweifte Klammern geschrieben werden und einem Markdown-Block vorangestellt.
+Eine zweite Zahl nach einem Minus definiert, bei welchem Punkt das Fragment
+wieder ausgeblendet wird. Innerhalb eines Blocks können auch einzelne Elemente
+aufgedeckt werden, dazu muss die doppelt geschweifte Klammer nur ausgepackt
+werden, wobei die zweiten Klammern das oder die jeweiligen Elemente umschließen,
+die ein- beziehungsweise ausgeblendet werden sollen.
+
+``` markdown
+                  {{1}}
+Dieser Text erscheint zu{3}{__aller__}erst.
+
+
+{{2-4}} Dieser Block erscheint als zweites
+Fragment und verschwindet bei Punkt 4.
+
+Ich bin immer da ...
+
+{{4}} Ich komme zuletzt.
+```
+
+                               {{1}}
+Dieser Text erscheint zu{3}{__aller__}erst.
+
+
+{{2-4}} Dieser Block erscheint als zweites
+Fragment und verschwindet bei Punkt 4.
+
+Ich bin immer da ...
+
+{{4}} Ich komme zuletzt.
+
+
+### Sprache
+
+                              --{{0}}--
+Die Sprachausgabe erfolgt mithilfe von
+[ResponsiveVoice](http://responsivevoice.org). In initialen Kommentar-Tag kann
+die Standardstimme definiert werden, diese kann je Abschnitt und Sprachausgabe
+auch geändert werden. Die Kommentarfunktion kann als Erweiterung der
+Fragment-Notation interpretiert werden und muss in doppelte Minuszeichen
+eingefügt werden. Sozusagen, die Erläuterung zu einem bestimmten Unterpunkt.
+Innerhalb eines Kommentars kann auch die Sprachausgabe geändert werden. Auf
+diese Weise lassen sich auch Dialoge zwischen unterschiedlichen Personen
+realisieren.
+
+``` markdown
+<!--
+..
+narrator: Deutsch Female
+-->
+
+# Überschrift 1
+
+              --{{1}}--
+Dieser Text wird deutsch ausgesprochen.
+
+
+     --{{2 UK English Male}}--
+I should speak with a UK like accent.
+
+     --{{3 Russian Female}}--
+Я говорю по-русски с женским голосом.
+```
+
+                             --{{1}}--
+Dieser Text wird deutsch ausgesprochen.
+
+
+                      --{{2 UK English Male}}--
+I should speak with a UK like accent.
+
+                       --{{3 Russian Female}}--
+Я говорю по-русски с женским голосом.
+
+
+
+## Eigene Erweiterungen
 
                              --{{0}}--
 Auf den vorhergehenden Seiten wurden sprachliche Erweiterungen von Markdown
 vorgestellt. Das Internet bietet aber weitaus mehr Möglichkeiten, die für einen
-Kurs von interesse sein könnten. LiaScript erlaubt es, im Gegensatz zu anderen
+Kurs von Interesse sein könnten. LiaScript erlaubt es, im Gegensatz zu anderen
 Markdown-Interpretern, auch JavaScript, HTML und CSS auf verschiedenste Art und
 Weise zu integrieren. Außerdem bietet LiaScript eine eigene Macro-Notation um
 wiederkehrende und aufwendige Aufgaben zu automatisieren.
@@ -711,7 +811,8 @@ link:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
                              --{{1}}--
 Danach kann überall im Dokument auf die eingefügte Funktionalität mit
 zugegriffen werden. Das nun dargestellte Beispiel nutzt die
-JavaScript-Bibliothek [Chartist](todo) um einen einfachen Graphen zu plotten.
+JavaScript-Bibliothek [Chartist](https://gionkunz.github.io/chartist-js/), um
+einen einfachen Graphen zu plotten.
 
                                {{1}}
 ``` html
@@ -719,9 +820,7 @@ JavaScript-Bibliothek [Chartist](todo) um einen einfachen Graphen zu plotten.
 </div>
 
 <script>
-  // Initialize a Line chart in the container with
-  // the ID chart
-  new Chartist.Line('#chart', {
+  let chart = new Chartist.Line('#chart', {
     labels: [1, 2, 3, 4],
     series: [[100, 120, 180, 200]]
   });
@@ -734,12 +833,11 @@ Der erzeugte Graph sieht dann wie folgt aus ...
                                {{2}}
 <div class="ct-chart ct-golden-section" id="chart"></div>
 <script>
-setTimeout(function(){
-  new Chartist.Line('#chart', {
+$.getScript("https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js", function(){
+  let chart = new Chartist.Line('#chart', {
     labels: [1, 2, 3, 4],
     series: [[100, 120, 180, 200]]
-  });
-}, 300);
+  })});
 </script>
 
 
@@ -747,66 +845,122 @@ setTimeout(function(){
 
 
                              --{{0}}--
-Im Abschnitt [Quizze](#3) wurde bereits das `@input`-Macro genutzt um die
+Im Abschnitt [Quizze](#6) wurde bereits das `@input`-Macro genutzt um die
 Stellen zu markieren, die durch die Nutzereingaben ersetzt werden sollen. Ein
 Macro beginnt immer mit einem `@`-Symbol und kann im  "Haupt"-Kommentar eines
 Dokumentes definiert werden. Macros beschreiben einfache Regeln für die
-Textersetzung, diese können entweder als Single-line oder Multi-line definiert
-werden (Letzteres muss mit einem `@end` abgeschlossen werden). Wie im Beispiel
-dargestellt, kann ein Macro auch wieder andere Macros aufrufen und Parameter
-werden über `@0` bis `@n` aufgerufen.
+Textersetzung. Für das einzeilige `@red` Macro gilt, alles was nach dem
+Doppelpunkt folgt definiert den Ersetzungstext. Parameterersetzungen werden
+jeweils durch ein `@`-Symbol gefolgt mit einer Nummer definiert.
 
 
+                              {{0-2}}
 ``` html
 <!--
-
 ...
-
-@Chartist: @Chartist.__full(@uid,@0)
-
-@Chartist.__full
-<div class="ct-chart ct-golden-section" id="chart@0">
-</div>
-<script>
-  new Chartist.Line('#chart@0', @1);
-</script>
-
-@end
-
+@red: <b style="color: red"> @0</b>
+...
 -->
 ```
 
-
                              --{{1}}--
-Im Dokument können diese Macros dann wie folgt aufgerufen werden, entweder in einer einfachen _Funktions-Notation_ oder in der _Block-Notation_
+Diese Erweiterungen können dann beliebig im Dokument eingesetzt werden, wie im
+folgenden Beispiel dargestellt.
 
+                              {{1-2}}
+*******************************************************************************
 
-                               {{1}}
 ``` markdown
-@Chartist(`{labels: [1,2,3], series: [[1,3,1]]}`)
+> Dies ist ein Blockzitate mit
+> einem @red(sehr wichtigen)
+> Beispiel...
+```
 
-` ` `json @Chartist
-{
-  labels: [1, 2, 3, 4, 5, 6, 7],
-  series: [
-    [100, 120, 180, 200, 0, 12, -1],
-    [10, 20, 30, 40, 50, 90, -100]]
-}
+---
+
+> Dies ist ein Blockzitate mit
+> einem @red(sehr wichtigen)
+> Beispiel...
+
+*******************************************************************************
+
+                             --{{2}}--
+Ein Macro kann auch andere Macros aufrufen und komplexere Macros können wie im
+Beispiel gezeigt, auch als Block definiert werden, welches aus beliebigen HTML,
+Markdown, und JavaScript-Elementen besteht. In diesem Fall sollte die Nutzung
+von Chartist vereinfacht werden, indem einmal die ID für das `div`-Element
+verändert wird aber auch der zu zeichnende Inhalt als zweiter Parameter
+übergeben wird.
+
+                               {{2}}
+``` html
+<!--
+...
+@Chartist
+<div class="ct-chart ct-golden-section" id="chart@0">
+</div>
+<script>
+  let chart = new Chartist.Line('#chart@0', {@1});
+</script>
+
+@end
+...
+-->
+```
+
+                             --{{3}}--
+Auch dieses Macro kann über die bekannte "funktionsähnliche" Notation aufgerufen
+werden. Da Kommas als Separatoren für die Parameter genutzt werden, müssen hier
+sogenannte back-ticks verwendet werden, um den zweiten Parameter als ganzen
+String zu übergeben. Zugegebenermaßen kann dies für sehr lange Eingaben auch
+sehr schnell unleserlich werden.
+
+
+                              {{3-4}}
+*******************************************************************************
+
+``` markdown
+@Chartist(id1,`labels: [1,2,3], series: [[1,3,1]]`)
+```
+
+---
+
+@Chartist(id1,`labels: [1,2,3], series: [[1,3,1]]`)
+
+*******************************************************************************
+
+                             --{{4}}--
+Aus diesem Grund können Macros auch über einen Code-Block aufgerufen werden,
+dazu muss nur im Kopf des Blockes das jeweilige Macro aufgerufen werden. Der
+Körper des Blocks wird dann insgesamt als letzter Parameter an die Textersetzung
+übergeben. Neben der übersichtlicheren Schreibweise werden von allen gängigen
+Markdown-Viewern diese Elemente zumindest als Code-Block mit Syntax-Highlighting
+richtig dargestellt und erlaubt zumindest die Interpretation der Parameter.
+
+
+                               {{4}}
+*******************************************************************************
+
+``` markdown
+` ` `json @Chartist(id2)
+labels: [1, 2, 3, 4, 5, 6, 7],
+series: [
+  [100, 120, 180, 200, 0, 12, -1],
+  [10, 20, 30, 40, 50, 90, -100]]
 ` ` `
 ```
 
-           {{2}}
-```json @Chartist.__full(test)
-{
-  labels: [1, 2, 3, 4, 5, 6, 7],
-  series: [
-    [100, 120, 180, 200, 0, 12, -1],
-    [10, 20, 30, 40, 50, 90, -100]]
-}
+---
+
+```json @Chartist(id2)
+labels: [1, 2, 3, 4, 5, 6, 7],
+series: [
+  [100, 120, 180, 200, 0, 12, -1],
+  [10, 20, 30, 40, 50, 90, -100]]
 ```
 
-{{2}}
-@Chartist.__full(test2,`{labels: [1,2,3], series: [[1,3,1]]}`)
+*******************************************************************************
+
 
 
 ## Programmierung
@@ -876,9 +1030,15 @@ else {
 
 
                              --{{2}}--
-Da es möglich ist JavaScript und verschiedene Bibliotheken einzubinden, können
-auch unterschiedliche Programmiersprachen unterstützt werden, wie zum Beispiel
-_C_ mithilfe der [rextester-API](https://rextester.com/main).
+Da es, wie in Abschnitt [Eigene Erweiterungen](#10) gezeigt, auch möglich ist
+verschiedene JavaScript-Funktionalität und Bibliotheken einzubinden, können auch
+unterschiedliche Programmiersprachen unterstützt werden. Das Beispiel zeigt ein
+einfaches _C_-Programm, dass mithilfe der
+[rextester-API](https://rextester.com/main) kompiliert und ausgeführt werden
+kann. Die etwas komplexere Definition im benötigten `script`-tag wurde hier
+mithilfe des Macros `@Rextester.eval` zur Verfügung gestellt. Auf diese Weise
+können beliebige ausführbare Code-Fragmente in einem Dokument definiert werden.
+
 
                               {{2-3}}
 ``` c source_file.c
@@ -1250,108 +1410,6 @@ Für solche JavaScript-Bibliotheken und auch zur Nutzung anderer Funktionalität
 bieten wir Templates an, die über ein eigenes Macro-System implementiert wurden.
 Diese können frei übernommen werden und minimieren auch den Bruch beim lesen des
 originalen Markdown-Dokumentes.
-
-
-
-## Ausgaben
-
-                              --{{0}}--
-Wir haben es fast geschafft, das was jetzt noch fehlt, ist die Aufteilung einer
-Seite in verschiedene Fragmente, sowie die Nutzung der Sprachausgabe.
-
-
-{{0-1}}![boring](https://media.giphy.com/media/HlqvH9JrahLZ6/giphy.gif)<!-- width="100%" -->
-
-
-                              --{{1}}--
-Falls Sie es noch nicht bemerkt haben, oben in der rechten Ecke befindet sich
-ein Knopf, der es erlaubt zwischen den unterschiedlichen Darstellungsmodi zu
-wechseln. Diese Option kommt frei Haus und sie können selber entscheiden, ob sie
-lieber den Erklärtext wie in einer Präsentation hören oder lieber ein Buch
-lesen.
-
-1. Präsentation (mit Text2Speech)
-2. Folien (mit Notizen)
-3. Lehrbuch (ohne Fragmente und Sprachausgabe)
-
-
-### Fragmente
-
-                              --{{0}}--
-Um Fragmente zu definieren, muss nur die jeweilige Fragment-Nummer in doppelt
-geschweifte Klammern geschrieben werden und einem Markdown-Block vorangestellt.
-Eine zweite Zahl nach einem Minus definiert, bei welchem Punkt das Fragment
-wieder ausgeblendet wird. Innerhalb eines Blocks können auch einzelne Elemente
-aufgedeckt werden, dazu muss die doppelt geschweifte Klammer nur ausgepackt
-werden, wobei die zweiten Klammern das oder die jeweiligen Elemente umschließen,
-die ein- beziehungsweise ausgeblendet werden sollen.
-
-``` markdown
-                  {{1}}
-Dieser Text erscheint zu{3}{__aller__}erst.
-
-
-{{2-4}} Dieser Block erscheint als zweites
-Fragment und verschwindet bei Punkt 4.
-
-Ich bin immer da ...
-
-{{4}} Ich komme zuletzt.
-```
-
-                               {{1}}
-Dieser Text erscheint zu{3}{__aller__}erst.
-
-
-{{2-4}} Dieser Block erscheint als zweites
-Fragment und verschwindet bei Punkt 4.
-
-Ich bin immer da ...
-
-{{4}} Ich komme zuletzt.
-
-
-### Sprache
-
-                              --{{0}}--
-Die Sprachausgabe erfolgt mithilfe von
-[ResponsiveVoice](http://responsivevoice.org). In initialen Kommentar-Tag kann
-die Standardstimme definiert werden, diese kann je Abschnitt und Sprachausgabe
-auch geändert werden. Die Kommentarfunktion kann als Erweiterung der
-Fragment-Notation interpretiert werden und muss in doppelte Minuszeichen
-eingefügt werden. Sozusagen, die Erläuterung zu einem bestimmten Unterpunkt.
-Innerhalb eines Kommentars kann auch die Sprachausgabe geändert werden. Auf
-diese Weise lassen sich auch Dialoge zwischen unterschiedlichen Personen
-realisieren.
-
-``` markdown
-<!--
-..
-narrator: Deutsch Female
--->
-
-# Überschrift 1
-
-              --{{1}}--
-Dieser Text wird deutsch ausgesprochen.
-
-
-     --{{2 UK English Male}}--
-I should speak with a UK like accent.
-
-     --{{3 Russian Female}}--
-Я говорю по-русски с женским голосом.
-```
-
-                             --{{1}}--
-Dieser Text wird deutsch ausgesprochen.
-
-
-                      --{{2 UK English Male}}--
-I should speak with a UK like accent.
-
-                       --{{3 Russian Female}}--
-Я говорю по-русски с женским голосом.
 
 
 ## Abschließende Worte
