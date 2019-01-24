@@ -676,12 +676,11 @@ von LiaScript verwiesen.
 *******************************************************************************
 
 
-## Ausgaben
+### Ausgaben
 
                               --{{0}}--
-Wir haben es fast geschafft, das was jetzt noch fehlt, ist die Aufteilung einer
-Seite in verschiedene Fragmente, sowie die Nutzung der Sprachausgabe.
-
+Im folgenden Teil soll die Aufteilung eines Abschnittes in mehrere Fragmente
+erläutert werden sowie die Nutzung der Sprachausgabe.
 
                                {{0-1}}
 ![boring](https://media.giphy.com/media/HlqvH9JrahLZ6/giphy.gif)<!-- width="100%" -->
@@ -699,7 +698,7 @@ lesen.
 3. Lehrbuch (ohne Fragmente und Sprachausgabe)
 
 
-### Fragmente
+#### Fragmente
 
                               --{{0}}--
 Um Fragmente zu definieren, muss nur die jeweilige Fragment-Nummer in doppelt
@@ -735,7 +734,7 @@ Ich bin immer da ...
 {{4}} Ich komme zuletzt.
 
 
-### Sprache
+#### Sprache
 
                               --{{0}}--
 Die Sprachausgabe erfolgt mithilfe von
