@@ -788,7 +788,7 @@ Markdown-Interpretern, auch JavaScript, HTML und CSS auf verschiedenste Art und
 Weise zu integrieren. Außerdem bietet LiaScript eine eigene Macro-Notation um
 wiederkehrende und aufwendige Aufgaben zu automatisieren.
 
-![Homer's Web Page](https://media.giphy.com/media/RxR1KghIie2iI/giphy.gif)<!-- width="100%"-->
+![www](https://media.giphy.com/media/RxR1KghIie2iI/giphy.gif)<!-- width="100%"-->
 
 ### JavaScript und HTML
 
