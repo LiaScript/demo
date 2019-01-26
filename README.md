@@ -420,7 +420,8 @@ Buchstaben kodiert sind.
 
                              --{{0}}--
 Wer möchte, der kann auch noch kompliziertere Sachverhalte, wie zum Beispiel
-Graphen, UML-Diagramme mithilfe von einfachen Textbausteinen generieren.
+Graphen, UML-Diagramme oder Bilder mithilfe von einfachen Textbausteinen
+abbilden.
 
 ``` HTML
                            .--->  F
@@ -527,7 +528,10 @@ anfordern:
 Hinweise können in der dargestellten Notation an jeden Quiz-Typ angehängt
 werden, beziehungsweise kann auch jedes Quiz mit einer erweiterten Erklärung zur
 Auflösung versehen werden. Diese Erklärung muss nur in einen Block
-eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
+eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist. Der
+zusätzliche `script`-Block erlaubt es die aktuelle Eingabe gesondert zu
+überprüfen und damit auf verschiedene Schreibweisen (Groß/klein) sowie den
+Einschub von Leerzeichen zu prüfen.
 
                               {{2-3}}
 *******************************************************************************
@@ -538,7 +542,11 @@ eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
     [[LiaScript]]
     [[?]] Es handelt sich dabei um eine neue Sprache...
     [[?]] Diese wurde speziell zur Erstellung von online-Kursen entwickelt.
-    [[?]] Das __L__ und das __S__ müssen jeweils groß geschrieben werden.
+    [[?]] Es kommen ein __L__ und ein __S__ darin vor.
+    <script>
+      let input = "@input".trim().toLowerCase();
+      input == "liascript";
+    </script>
     **************************
 
     Diese zusätzliche Auflösung ist optional und kann so __viele__
@@ -560,7 +568,11 @@ eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist.
     [[LiaScript]]
     [[?]] Es handelt sich dabei um eine neue Sprache...
     [[?]] Diese wurde speziell zur Erstellung von online-Kursen entwickelt.
-    [[?]] Das __L__ und das __S__ müssen jeweils groß geschrieben werden.
+    [[?]] Es kommen ein __L__ und ein __S__ darin vor.
+    <script>
+      let input = "@input".trim().toLowerCase();
+      input == "liascript";
+    </script>
     **************************
 
     Diese zusätzliche Auflösung ist optional und kann so __viele__
@@ -642,12 +654,7 @@ Elemente durch ein `X` markiert sein oder keines.
 
                              --{{5}}--
 Ein generisches Quiz kann mithilfe der folgenden Notation erstellt werden, wobei
-hier das Ergebnis einzig und allein von einer Zufallszahl abhängig ist. Das
-zusätzliche `script`-tag kann aber auch bei den anderen Quiz-Typen genutzt
-werden, um Eingaben zu prüfen, wie zum Beispiel unterschiedliche Schreibweisen
-in einem Text-Quiz. Jedoch sei hier auch auf die
-[Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1)
-von LiaScript verwiesen.
+hier das Ergebnis einzig und allein von einer Zufallszahl abhängig ist. Über andere HTML-Elemente können dann auch die Eingaben abgebildet werden.
 
 
                                {{5}}
@@ -692,7 +699,7 @@ ein Knopf, der es erlaubt zwischen den unterschiedlichen Darstellungsmodi zu
 wechseln. Diese Option kommt frei Haus und sie können selber entscheiden, ob sie
 lieber den Erklärtext wie in einer Präsentation hören oder lieber ein Buch
 lesen.
-
+                                {{1}}
 1. Präsentation (mit Text2Speech)
 2. Folien (mit Notizen)
 3. Lehrbuch (ohne Fragmente und Sprachausgabe)
@@ -707,7 +714,10 @@ Eine zweite Zahl nach einem Minus definiert, bei welchem Punkt das Fragment
 wieder ausgeblendet wird. Innerhalb eines Blocks können auch einzelne Elemente
 aufgedeckt werden, dazu muss die doppelt geschweifte Klammer nur ausgepackt
 werden, wobei die zweiten Klammern das oder die jeweiligen Elemente umschließen,
-die ein- beziehungsweise ausgeblendet werden sollen.
+die ein- beziehungsweise ausgeblendet werden sollen. Verschiedenen Blöcken
+können die gleichen Nummern zugewiesen werden oder man umschließt sie mit zwei
+Linien aus Sternchen `*`, ebenso wie es auch im Abschnitt [Quizze](#6) mit der
+Auflösung gemacht wurde.  
 
 ``` markdown
                   {{1}}
@@ -734,7 +744,7 @@ Ich bin immer da ...
 {{4}} Ich komme zuletzt.
 
 
-#### Sprache
+#### Spracheausgabe
 
                               --{{0}}--
 Die Sprachausgabe erfolgt mithilfe von
@@ -743,9 +753,10 @@ die Standardstimme definiert werden, diese kann je Abschnitt und Sprachausgabe
 auch geändert werden. Die Kommentarfunktion kann als Erweiterung der
 Fragment-Notation interpretiert werden und muss in doppelte Minuszeichen
 eingefügt werden. Sozusagen, die Erläuterung zu einem bestimmten Unterpunkt.
-Innerhalb eines Kommentars kann auch die Sprachausgabe geändert werden. Auf
-diese Weise lassen sich auch Dialoge zwischen unterschiedlichen Personen
-realisieren.
+Innerhalb eines Kommentars kann auch die Sprachausgabe geändert werden. In
+Abhängigkeit zum aktuellen Präsentationsmodus wird dieser Text entweder
+gesprochen oder im Dokument dargestellt. Des Weiteren lassen sich so auch
+Dialoge zwischen unterschiedlichen Personen realisieren.
 
 ``` markdown
 <!--
