@@ -166,7 +166,7 @@ link: https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
                              --{{1}}--
 LiaScript ist eine Erweiterung der Auszeichnungssprache
-[Markdown](https://de.wikipedia.org/wiki/Markdown). Das ursprüngliche  Ziel von
+[Markdown](https://de.wikipedia.org/wiki/Markdown). Das ursprüngliche Ziel von
 Markdown war es, die Ausgangsform auch ohne weitere Konvertierung für einen
 Menschen leicht lesbar und damit auch editierbar zu machen.
 
@@ -206,16 +206,16 @@ Ungeordnete Listen sehen wie folgt aus:
                              --{{2}}--
 LiaScript setzt auf dieser Notation auf, erweitert diese um viele multimediale
 Elemente und erlaubt es beliebige JavaScript-Funktionalität einzubinden. Der
-Fokus von LiaScript lag bei der einfachen Entwicklung von online-Kursen für
+Fokus von LiaScript lag bei der einfachen Entwicklung von Online-Kursen für
 jedermann. Diese sollten einerseits über einen Screencast-Charakter verfügen,
 gemixt mit dem Stil einer PowerPoint-Präsentation, aber auch interaktive
 Elemente einbinden, wie Quizze, Umfragen, Animationen, online Programmierung,
 etc. Es sollte einfach um zusätzliche Funktionalität erweiterbar sein und durch
-ein integriertes Macro-System auch wiederverwendbare Komponenten kapseln.
+ein integriertes Makro-System auch wiederverwendbare Komponenten kapseln.
 
 
                                {{2}}
-* Projekt-Webseite:
+* Projektseite:
   https://LiaScript.github.io
 * Dieser Kurs auf:
   * GitHub --> https://github.com/LiaScript/Demo
@@ -228,7 +228,7 @@ ein integriertes Macro-System auch wiederverwendbare Komponenten kapseln.
 Auf den folgenden Seiten sollen kurz einige Erweiterungen vorgestellt werden.
 Für eine ausführliche Erläuterung zu allen Möglichkeiten sei jedoch auf die
 [LiaScript Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1)
-auf der Projekt-Seite verwiesen.
+auf der [Projekseite](https://liascript.github.io) verwiesen.
 
 ![knowledge hit](https://media.giphy.com/media/jCL5JbYPYQz96/giphy.gif)<!--width="100%"-->
 
@@ -262,7 +262,7 @@ __Resultat:__
 *******************************************************************************
 
                              --{{1}}--
-Bilder werden wie Verweise behandelt, nur das hier ein Ausrufezeichen vor den
+Bilder werden wie Verweise behandelt, nur dass hier ein Ausrufezeichen vor den
 formatierten Verweis gestellt werden muss:
 
                               {{1-2}}
@@ -334,8 +334,8 @@ Dem aufmerksamen Betrachter wird nicht entfallen sein, dass in manchen
 Beispielen HTML-Kommentare mit zusätzlichen HTML-Annotationen enthalten waren.
 Dies ist eine Möglichkeit, jedes Element, sei es Text, Bild, Tabelle oder Video,
 noch mit weiteren Eigenschaften zu versehen. Ein vorangestellter Kommentar
-definiert die Attribute für einen ganzen Block, während ein hinten angestelltes
-nur die Eigenschaften des vorangegangenen Elementes verändert.
+definiert die Attribute für einen ganzen Block, während ein hinten angestellter
+Kommentar nur die Eigenschaften des vorangegangenen Elementes verändert.
 
 
                                {{4}}
@@ -444,8 +444,8 @@ abbilden.
 
                              --{{1}}--
 Und dazu auch alle möglichen Unicode-Zeichen nutzen. Da LiaScript international
-ist und somit auch chinesischen, griechische, arabische oder anderweitige
-Zeichen und Symbole interpretieren kann.
+ist und somit auch chinesische, griechische, arabische oder anderweitige Zeichen
+und Symbole interpretieren kann.
 
                                {{1}}
 *******************************************************************
@@ -487,9 +487,9 @@ Zeichen und Symbole interpretieren kann.
 ### Quizze
 
                              --{{0}}--
-Ein Quiz ist eine gute Möglichkeit dem Lernenden kurz nochmal die Möglichkeit zu
-geben, sein Wissen bezüglich eines aktuellen Lernmoduls zu überprüfen. LiaScript
-unterstützt grundsätzlich 4 Quiz-Typen, die durch zusätzliche Elemente
+Ein Quiz ist eine gute Möglichkeit dem Lernenden kurz noch mal die Möglichkeit
+zu geben, sein Wissen bezüglich eines aktuellen Lernmoduls zu überprüfen.
+LiaScript unterstützt grundsätzlich 4 Quiz-Typen, die durch zusätzliche Elemente
 angepasst werden können:
 
                               {{0-1}}
@@ -530,7 +530,7 @@ werden, beziehungsweise kann auch jedes Quiz mit einer erweiterten Erklärung zu
 Auflösung versehen werden. Diese Erklärung muss nur in einen Block
 eingeschlossen werden, der durch zwei Reihen "Sternchen" definiert ist. Der
 zusätzliche `script`-Block erlaubt es die aktuelle Eingabe gesondert zu
-überprüfen und damit auf verschiedene Schreibweisen (Groß/klein) sowie den
+überprüfen und damit auf verschiedene Schreibweisen (groß/klein) sowie den
 Einschub von Leerzeichen zu prüfen.
 
                               {{2-3}}
@@ -699,6 +699,7 @@ ein Knopf, der es erlaubt zwischen den unterschiedlichen Darstellungsmodi zu
 wechseln. Diese Option kommt frei Haus und sie können selber entscheiden, ob sie
 lieber den Erklärtext wie in einer Präsentation hören oder lieber ein Buch
 lesen.
+
                                 {{1}}
 1. Präsentation (mit Text2Speech)
 2. Folien (mit Notizen)
@@ -796,7 +797,7 @@ Auf den vorhergehenden Seiten wurden sprachliche Erweiterungen von Markdown
 vorgestellt. Das Internet bietet aber weitaus mehr Möglichkeiten, die für einen
 Kurs von Interesse sein könnten. LiaScript erlaubt es, im Gegensatz zu anderen
 Markdown-Interpretern, auch JavaScript, HTML und CSS auf verschiedenste Art und
-Weise zu integrieren. Außerdem bietet LiaScript eine eigene Macro-Notation um
+Weise zu integrieren. Außerdem bietet LiaScript eine eigene Makro-Notation um
 wiederkehrende und aufwendige Aufgaben zu automatisieren.
 
 ![www](https://media.giphy.com/media/RxR1KghIie2iI/giphy.gif)<!-- width="100%"-->
@@ -852,15 +853,15 @@ $.getScript("https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js", funct
 </script>
 
 
-### Macros
+### Makros
 
 
                              --{{0}}--
-Im Abschnitt [Quizze](#6) wurde bereits das `@input`-Macro genutzt um die
+Im Abschnitt [Quizze](#6) wurde bereits das `@input`-Makro genutzt um die
 Stellen zu markieren, die durch die Nutzereingaben ersetzt werden sollen. Ein
-Macro beginnt immer mit einem `@`-Symbol und kann im  "Haupt"-Kommentar eines
-Dokumentes definiert werden. Macros beschreiben einfache Regeln für die
-Textersetzung. Für das einzeilige `@red` Macro gilt, alles was nach dem
+Makro beginnt immer mit einem `@`-Symbol und kann im  "Haupt"-Kommentar eines
+Dokumentes definiert werden. Makros beschreiben einfache Regeln für die
+Textersetzung. Für das einzeilige `@red` Makro gilt, alles was nach dem
 Doppelpunkt folgt definiert den Ersetzungstext. Parameterersetzungen werden
 jeweils durch ein `@`-Symbol gefolgt mit einer Nummer definiert.
 
@@ -896,11 +897,11 @@ folgenden Beispiel dargestellt.
 *******************************************************************************
 
                              --{{2}}--
-Ein Macro kann auch andere Macros aufrufen und komplexere Macros können wie im
-Beispiel gezeigt, auch als Block definiert werden, welches aus beliebigen HTML,
-Markdown, und JavaScript-Elementen besteht. In diesem Fall sollte die Nutzung
+Ein Makro kann auch andere Makros aufrufen und komplexere Makros können, wie im
+Beispiel gezeigt, auch als Block definiert werden, welches aus beliebigen HTML-,
+Markdown- und JavaScript-Elementen besteht. In diesem Fall sollte die Nutzung
 von Chartist vereinfacht werden, indem einmal die ID für das `div`-Element
-verändert wird aber auch der zu zeichnende Inhalt als zweiter Parameter
+verändert wird, aber auch der zu zeichnende Inhalt als zweiter Parameter
 übergeben wird.
 
                                {{2}}
@@ -920,7 +921,7 @@ verändert wird aber auch der zu zeichnende Inhalt als zweiter Parameter
 ```
 
                              --{{3}}--
-Auch dieses Macro kann über die bekannte "funktionsähnliche" Notation aufgerufen
+Auch dieses Makro kann über die bekannte "funktionsähnliche" Notation aufgerufen
 werden. Da Kommas als Separatoren für die Parameter genutzt werden, müssen hier
 sogenannte back-ticks verwendet werden, um den zweiten Parameter als ganzen
 String zu übergeben. Zugegebenermaßen kann dies für sehr lange Eingaben auch
@@ -941,8 +942,8 @@ sehr schnell unleserlich werden.
 *******************************************************************************
 
                              --{{4}}--
-Aus diesem Grund können Macros auch über einen Code-Block aufgerufen werden,
-dazu muss nur im Kopf des Blockes das jeweilige Macro aufgerufen werden. Der
+Aus diesem Grund können Makros auch über einen Code-Block aufgerufen werden,
+dazu muss nur im Kopf des Blockes das jeweilige Makro aufgerufen werden. Der
 Körper des Blocks wird dann insgesamt als letzter Parameter an die Textersetzung
 übergeben. Neben der übersichtlicheren Schreibweise werden von allen gängigen
 Markdown-Viewern diese Elemente zumindest als Code-Block mit Syntax-Highlighting
@@ -980,7 +981,7 @@ series: [
 Durch die folgende Syntax können mehrere standard Markdown Code-Blöcke zu einem
 Projekt zusammengefasst werden. Die unterschiedlichen Dateien können mit einem
 Namen versehen werden und lassen sich auf und zu klappen. Das zusätzliche
-`script`-tag am Ende weist diese Blöcke als ausführbaren Code aus und definiert
+`script`-tag am Ende weist diese Blöcke als ausführbaren Code aus und definiert,
 wie mit den Inhalten der einzelnen Blöcke zu verfahren ist.
 
                               {{0-1}}
@@ -1047,7 +1048,7 @@ unterschiedliche Programmiersprachen unterstützt werden. Das Beispiel zeigt ein
 einfaches _C_-Programm, dass mithilfe der
 [rextester-API](https://rextester.com/main) kompiliert und ausgeführt werden
 kann. Die etwas komplexere Definition im benötigten `script`-tag wurde hier
-mithilfe des Macros `@Rextester.eval` zur Verfügung gestellt. Auf diese Weise
+mithilfe des Makros `@Rextester.eval` zur Verfügung gestellt. Auf diese Weise
 können beliebige ausführbare Code-Fragmente in einem Dokument definiert werden.
 
 
@@ -1418,7 +1419,7 @@ class Vec2D {
 
                                --{{4}}--
 Für solche JavaScript-Bibliotheken und auch zur Nutzung anderer Funktionalitäten
-bieten wir Templates an, die über ein eigenes Macro-System implementiert wurden.
+bieten wir Templates an, die über ein eigenes Makro-System implementiert wurden.
 Diese können frei übernommen werden und minimieren auch den Bruch beim lesen des
 originalen Markdown-Dokumentes.
 
@@ -1437,9 +1438,9 @@ hier in mehreren Versionen vorliegen und es können auch private Projekte
 angelegt werden, die nicht von jedem eingesehen werden können.
 
                               --{{2}}--
-Jeder der einen Kurs erstellt, behält auch all seine Rechte daran und kann seine
-Inhalte nach eigenem Belieben und Ermessen verändern und mit anderen Menschen
-Teilen.
+Jeder, der einen Kurs erstellt, behält auch all seine Rechte daran und kann
+seine Inhalte nach eigenem Belieben und Ermessen verändern und mit anderen
+Menschen teilen.
 
 
 1. LiaScript ist eine reine clientseitige Implementierung in JavaScript
